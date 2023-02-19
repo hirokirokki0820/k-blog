@@ -73,3 +73,9 @@ group :test do
   gem "selenium-webdriver"
   gem "webdrivers"
 end
+
+# Devise(4.9.0)
+gem "devise"
+
+# .envファイル用
+gem "dotenv-rails"
