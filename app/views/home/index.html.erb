@@ -1,0 +1,20 @@
+
+
+<h1 class="mb-3">記事一覧</h1>
+
+<%= link_to "記事を書く", new_post_path, class: "btn btn-sky" %>
+
+<% if user_signed_in? %>
+  <div class="my-5">
+    <%= link_to "ログアウト", destroy_user_session_path, class: "btn btn-red", data: { turbo_method: :delete, turbo_confirm: "本当にログアウトしますか？" } %>
+  </div>
+<% elsif admin_signed_in? %>
+  <div class="my-5">
+    <%= link_to "ログアウト", destroy_admin_session_path, class: "btn btn-red", data: { turbo_method: :delete, turbo_confirm: "本当にログアウトしますか？" } %>
+  </div>
+<% else %>
+  <div class="my-5">
+    <%= link_to "新規登録", new_user_registration_path, class: "btn btn-sky" %>
+    <%= link_to "ログイン", new_user_session_path, class: "btn btn-outline-gray" %>
+  </div>
+<% end %>

@@ -1,0 +1,15 @@
+<div class="container">
+  <%= form_with model: @post, class: "bg-white px-6 py-5 rounded-md" do |f| %>
+    <div class="mb-3">
+      <%= f.label :title, "タイトル" %>
+      <%= f.text_field :title, class: "post-form"  %>
+    </div>
+    <div class="mb-3">
+      <%= f.label :content, "記事" %>
+      <%= f.text_area :content, class: "post-form", rows: 30  %>
+    </div>
+    <div class="mb-3">
+      <%= f.submit "投稿する", class: "btn btn-sky" %>
+    </div>
+  <% end %>
+</div>

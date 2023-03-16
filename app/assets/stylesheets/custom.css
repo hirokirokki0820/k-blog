@@ -11,6 +11,12 @@ label.required:after {
   @apply bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full pl-10 p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500
 }
 
+/**** 投稿 ****/
+.post-form{
+  @apply bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500
+}
+
+
 /**** リンク ****/
 .link{
   @apply underline hover:text-sky-600
@@ -22,7 +28,11 @@ label.required:after {
 }
 
 .btn-sky{
-  @apply text-white bg-sky-600 hover:bg-sky-800 cursor-pointer;
+  @apply text-white bg-sky-600 hover:bg-sky-500 cursor-pointer;
+}
+
+.btn-red{
+  @apply text-white bg-red-500 hover:bg-red-400 cursor-pointer;
 }
 
 .btn-outline-gray{
