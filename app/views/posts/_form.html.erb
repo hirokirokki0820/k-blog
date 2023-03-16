@@ -6,7 +6,7 @@
     </div>
     <div class="mb-3">
       <%= f.label :content, "記事" %>
-      <%= f.text_area :content, class: "post-form", rows: 30  %>
+      <%= f.rich_text_area :content, class: "post-form" %>
     </div>
     <div class="mb-3">
       <%= f.submit "投稿する", class: "btn btn-sky" %>

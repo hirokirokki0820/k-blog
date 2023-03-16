@@ -1,10 +1,20 @@
 @import "tailwindcss/base";
 @import "tailwindcss/components";
 @import "custom";
+@import "actiontext";
+@import "trix/dist/trix.css";
 @import "tailwindcss/utilities";
+
+
+trix-editor {
+  min-height: 20em;
+  max-height: 20em;
+  overflow-y: auto;
+}
 /*
 @tailwind base;
 @tailwind components;
 @import "custom";
 @tailwind utilities;
 */
+@import 'actiontext.css';
