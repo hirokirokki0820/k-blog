@@ -19,6 +19,8 @@ module Devise704Tailwind
     config.i18n.default_locale = :ja
     config.time_zone = "Tokyo"
 
+    config.active_storage.variant_processor = :mini_magick
+
     # config.eager_load_paths << Rails.root.join("extras")
   end
 end

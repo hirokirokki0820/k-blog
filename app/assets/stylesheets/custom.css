@@ -1,5 +1,31 @@
 /******* カスタムコンポーネント *********/
 
+/**** 見出し ****/
+.post-content h2,
+.post-form h2 {
+  padding: 1rem 1.5rem;
+  border-left: 5px solid gray;
+  font-size: 1.5rem;
+  @apply bg-gray-100
+}
+
+/**** リスト ****/
+.post-content ul li,
+.post-form ul li {
+  @apply list-disc
+}
+
+.post-content ol li,
+.post-form ol li {
+  @apply list-decimal
+}
+
+/**** リンク ****/
+.post-content a{
+  @apply border-b border-blue-500 text-blue-500
+}
+
+
 /**** フォーム ****/
 /* 必須項目ラベルに「＊」印をつける */
 label.required:after {

@@ -1,6 +1,18 @@
-<div class="mb-3">
-  <%= @post.title %>
-</div>
-<div class="mb-3">
-  <%= @post.content %>
+<div class="mb-3 max-w-2xl text-left mx-auto">
+  <% if admin_signed_in? %>
+    <div class="my-3">
+      <%= link_to "投稿の編集", edit_post_path, class: "btn btn-sky" %>
+    </div>
+  <% end %>
+  <div class="my-8 text-3xl">
+    <h1><%= @post.title %></h1>
+  </div>
+  <div class="mb-3 post-content">
+    <%= @post.content %>
+  </div>
+  <% if admin_signed_in? %>
+    <div class="my-3">
+      <%= link_to "投稿の編集", edit_post_path, class: "btn btn-sky" %>
+    </div>
+  <% end %>
 </div>

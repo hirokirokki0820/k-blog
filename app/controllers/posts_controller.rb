@@ -1,7 +1,9 @@
 class PostsController < ApplicationController
   before_action :set_post, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_admin!, only: [:new, :edit, :update, :destroy]
 
   def index
+    @posts = Post.with_rich_text_content
   end
 
   def new
@@ -26,9 +28,17 @@ class PostsController < ApplicationController
   end
 
   def update
+    if @post.update(post_params)
+      flash[:notice] = "投稿を更新しました。"
+      redirect_to @post
+    else
+      render "edit", status: :unprocessable_entity
+    end
   end
 
   def destroy
+    @post.destroy
+    redirect_to root_path, status: :see_other
   end
 
   private
